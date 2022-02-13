@@ -2,7 +2,6 @@
 
 #include "Event.h"
 
-
 namespace Engine {
 
 	class HAZEL_API MouseMovedEvent : public Event
@@ -93,3 +92,5 @@ namespace Engine {
 
 		EVENT_CLASS_TYPE(MouseButtonReleased)
 	};
+
+}

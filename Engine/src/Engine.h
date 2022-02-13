@@ -1,8 +1,10 @@
 #pragma once
 
-//For use by games built on Engine
+// For use by Hazel applications
+
 #include "Engine/Application.h"
 #include "Engine/Log.h"
-// ----Entry Point-------------------------
+
+// ---Entry Point---------------------
 #include "Engine/EntryPoint.h"
-// ----------------------------------------
+// -----------------------------------

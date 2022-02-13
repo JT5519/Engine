@@ -2,7 +2,6 @@
 
 #include "Event.h"
 
-
 namespace Engine {
 
 	class HAZEL_API KeyEvent : public Event
@@ -53,3 +52,4 @@ namespace Engine {
 
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
+}

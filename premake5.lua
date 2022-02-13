@@ -1,4 +1,4 @@
-workspace "Engine"
+orkspace "Engine"
 	architecture "x64"
 
 	configurations
@@ -12,9 +12,9 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
-IncludeDir["GLFW"] = "Engine/Vendor/GLFW/include"
+IncludeDir["GLFW"] = "Engine/vendor/GLFW/include"
 
-include "Engine/Vendor/GLFW"
+include "Engine/vendor/GLFW"
 
 project "Engine"
 	location "Engine"
@@ -32,14 +32,16 @@ project "Engine"
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
-	includedirs 
+
+	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/Vendor/spdlog/include",
+		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}"
 	}
-	links
-	{
+
+	links 
+	{ 
 		"GLFW",
 		"opengl32.lib"
 	}
@@ -54,10 +56,10 @@ project "Engine"
 			"HZ_PLATFORM_WINDOWS",
 			"HZ_BUILD_DLL"
 		}
-	
+
 		postbuildcommands
 		{
-			 ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")	
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
@@ -70,8 +72,7 @@ project "Engine"
 
 	filter "configurations:Dist"
 		defines "HZ_DIST"
-		symbols "On" 
-
+		optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
@@ -87,9 +88,9 @@ project "Sandbox"
 		"%{prj.name}/src/**.cpp"
 	}
 
-	includedirs 
+	includedirs
 	{
-		"Engine/Vendor/spdlog/include",
+		"Engine/vendor/spdlog/include",
 		"Engine/src"
 	}
 
@@ -118,4 +119,4 @@ project "Sandbox"
 
 	filter "configurations:Dist"
 		defines "HZ_DIST"
-		symbols "On"
+		optimize "On"

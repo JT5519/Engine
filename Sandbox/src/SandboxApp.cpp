@@ -7,10 +7,12 @@ public:
 	{
 
 	}
+
 	~Sandbox()
 	{
 
 	}
+
 };
 
 Engine::Application* Engine::CreateApplication()
