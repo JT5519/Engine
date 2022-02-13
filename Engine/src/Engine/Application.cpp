@@ -1,3 +1,4 @@
+#include "hzpch.h"
 #include "Application.h"
 
 #include "Engine/Events/ApplicationEvent.h"

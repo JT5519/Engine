@@ -17,6 +17,9 @@ project "Engine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "hzpch.h"
+	pchsource "Engine/src/hzpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
