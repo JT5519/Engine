@@ -4,6 +4,8 @@
 #include "Engine/Events/ApplicationEvent.h"
 #include "Engine/Log.h"
 
+#include <GLFW/glfw3.h>
+
 namespace Engine
 {
 	Application::Application()

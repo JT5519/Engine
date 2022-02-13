@@ -1,9 +1,10 @@
 #pragma once
 
+#include "hzpch.h"
 #include "Engine/Core.h"
 
-
 namespace Engine {
+
 
 
 	enum class EventType

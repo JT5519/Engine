@@ -2,18 +2,23 @@
 
 #include "Core.h"
 #include "Events/Event.h"
+#include "Window.h"
 
-namespace Engine
-{
+namespace Engine {
+
 	class HAZEL_API Application
 	{
 	public:
 		Application();
-		virtual ~Application();	
+		virtual ~Application();
+
 		void Run();
+	private:
+		std::unique_ptr<Window> m_Window;
+		bool m_Running = true;
 	};
 
-	//defined in client game
+	// To be defined in CLIENT
 	Application* CreateApplication();
-}
 
+}
