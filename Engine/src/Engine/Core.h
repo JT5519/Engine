@@ -7,7 +7,7 @@
 #define HAZEL_API __declspec(dllimport)
 #endif
 #else
-#error Hazel only supports Windows!
+#error Engine only supports Windows!
 #endif
 
 #ifdef HZ_ENABLE_ASSERTS
